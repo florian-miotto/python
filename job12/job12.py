@@ -6,11 +6,9 @@
 
 import re
 
-with open('data.txt', 'r') as file:
-    text = file.read()
+with open('data.txt', 'r') as f:
+    text = f.read()
 
     # supprimer les caractères spéciaux
-    text = re.sub(r'[^a-zA-Z\s]', '', text)
-    words = text.split()
-    count = len(words)
-    print(f"Le fichier contient {count} mots.")
+count = len(re.findall(r'\b\w+\b', text))
+print(f"Le fichier contient {count} mots.")
