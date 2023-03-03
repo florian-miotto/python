@@ -5,7 +5,7 @@
 # La fonction devra :
 # - Remplir une liste myList contenant tous ces paramètres.
 # - Trier par ordre croissant la liste  (Donc sans la fonction sort)
-#
+
 # - Afficher la liste dans un terminal
 
 def fonction_ind(*args):
