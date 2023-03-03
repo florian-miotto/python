@@ -8,11 +8,11 @@
 # Attention: Le nouveau mot doit être le mot le plus proche possible, dans l’ordre
 # alphabétique, du mot original !
 
-def get_input_word():
+def input_word():
     word = input("Entrez un mot sans espaces ni caractères spéciaux : ")
     if not word.isalpha() or not word.islower():
         print("Le mot doit être composé uniquement de lettres de l'alphabet sans accent ni majuscules.")
-        return get_input_word()
+        return input_word()
     else:
         return word
 
@@ -34,6 +34,6 @@ def rearrange_word(word):
     return new_word
 
 
-word = get_input_word()
+word = input_word()
 new_word = rearrange_word(word)
 print(f"Le mot '{word}' réarrangé est '{new_word}'.")
