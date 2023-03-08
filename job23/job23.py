@@ -7,7 +7,8 @@
 # renseigné par l'utilisateur.
 # Attention: Le nouveau mot doit être le mot le plus proche possible, dans l’ordre
 # alphabétique, du mot original !
-
+import random
+random_number = random.randint(0, 9)
 def input_word():
     word = input("Entrez un mot sans espaces ni caractères spéciaux : ")
     if not word.isalpha() or not word.islower():
@@ -19,7 +20,7 @@ def input_word():
 
 def rearrange_word(word):
     letters = list(word)
-    for i in range(len(letters)-1, 0, -1):
+    for i in range(len(letters)-1, 0, random_number):
 
         if letters[i] != letters[i-1]:
 
@@ -32,6 +33,7 @@ def rearrange_word(word):
             break
     new_word = ''.join(letters)
     return new_word
+
 
 
 word = input_word()
